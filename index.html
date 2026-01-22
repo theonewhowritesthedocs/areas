@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External SVG Background</title>
+    <style>
+        /* 1. Basic Page Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+		background-color: #171717;
+        }
+
+        /* 2. The Background Image Setup */
+        .bg-svg {
+            position: absolute; /* Keeps it behind content while scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;    /* Scales to window width */
+            height: auto;   /* Automatically adjusts height based on SVG aspect ratio */
+            z-index: -1;    /* Moves it behind your text/content */
+            display: block;
+clip-path: inset(0.3% 0 8.5% 0); 
+        }
+
+        /* 3. Optional: Content Styling */
+        .content {
+            position: relative;
+            z-index: 1;
+            font-family: sans-serif;
+            padding: 50px;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CHANGE THE 'src' TO YOUR SVG FILE PATH -->
+    <img src="diagram-export-1-21-2026-7_39_09-PM.svg" class="bg-svg" alt="Background">
+
+</body>
+</html>
